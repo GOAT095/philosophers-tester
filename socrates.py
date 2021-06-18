@@ -103,7 +103,9 @@ def parse_death_line(line):
     """
     pattern = re.compile(config.SEPARATOR_REGEXP)
     separator_index = pattern.search(line).start()
-    death_time = int(line[:separator_index].strip("\0"))
+    line = re.search(r'([0-9]+) ', line).group(1)
+    print(line)
+    death_time = int(line)
     return death_time
 
 
@@ -117,8 +119,8 @@ def measure_starvation_timing(binary):
     # Get the start time
     first_line = data[: data.find("\n")]
 
-    separator_index = pattern.search(first_line).start()
-    start_time = int(first_line[:separator_index])
+    line =  re.search(r'([0-9]+) ', first_line).group(1)
+    start_time = int(line)
 
     # Get the time of death
     last_line = data[data.rfind("\n") + 1 :]
