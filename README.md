@@ -1,4 +1,5 @@
 
+Philosophers Project Tester
 Credit to socrates .
 Disclaimer dont use colors in printf or the death timing test wont work ! 
 ![Logo](https://i.imgur.com/JyKRlbd.png)
