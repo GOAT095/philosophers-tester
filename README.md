@@ -1,6 +1,7 @@
 
 # philosophers tester 42
 Credit to socrates .
+to https://github.com/celomary for some python explanations
 ![Logo](https://i.imgur.com/JyKRlbd.png)
 
 # socrates
