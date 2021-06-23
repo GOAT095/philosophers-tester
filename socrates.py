@@ -181,6 +181,7 @@ def test_program(binary):
     return True
 
 
+
 def cpu_warning():
     if cpu_overloaded():
         print(
@@ -259,6 +260,8 @@ def socrates(bin_path, philo_num):
     ):
         print(f"\n{bcolors.OKBLUE}---------- PHILO_ONE ----------{bcolors.ENDC}\n")
         test_program(f"{bin_path}/philo/philo")
+        print(f"\n{bcolors.OKBLUE}---------- PHILO_BONUS ----------{bcolors.ENDC}\n")
+        test_program(f"{bin_path}/philo_bonus/philo_bonus")
     if config.FAIL == 1:
         return 1
     else:
@@ -277,8 +280,7 @@ if __name__ == "__main__":
             """\
             Number of the philosopher program to test
              - 1: philo
-             - 2: philo_two
-             - 3: philo_three
+             - 3: philo_bonus
              - 0: all programs (default)
         """
         ),
